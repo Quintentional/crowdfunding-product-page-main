@@ -15,8 +15,69 @@ nav {
 nav a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
+  font-size: 14px;
 }
 nav a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+#project {
+  width: 730px;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  position: relative;
+  top: -92.5px;
+}
+
+#project-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#project-top svg {
+  position: relative;
+  top: -30px;
+}
+#project-top h1 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+#project-top p {
+  color: hsl(0, 0%, 48%);
+}
+
+#project-bot {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3rem;
+}
+#project-bot button {
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+#project-bot #back {
+  width: 205px;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  margin-left: 3rem;
+}
+#project-bot #bookmark {
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3rem;
+}
+#project-bot #bookmark span {
+  color: hsl(0, 0%, 48%);
   margin-right: 2rem;
 }
 
@@ -29,6 +90,8 @@ nav a:not(:last-child) {
 body {
   width: 100%;
   min-height: 100vh;
+  background-color: hsl(0, 0%, 96%);
+  font-family: "Commissioner", serif;
   display: flex;
   justify-content: center;
 }

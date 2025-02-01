@@ -1,6 +1,7 @@
 
 @import './variables';
 @import './header';
+@import './project';
 
 
 * {
@@ -12,6 +13,8 @@
 body {
     width: 100%;
     min-height: 100vh;
+    background-color: hsl(0, 0%, 96%);
+    font-family: "Commissioner", serif;
     display: flex;
     justify-content: center;
 }

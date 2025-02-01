@@ -1,3 +1,8 @@
+
+$width: 730px;
+
+$border: 1px solid hsla(0, 0%, 48%, 0.158);
+
 @mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
