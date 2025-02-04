@@ -81,6 +81,70 @@ nav a:not(:last-child) {
   margin-right: 2rem;
 }
 
+#progress {
+  width: 730px;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+#numbers {
+  display: flex;
+  margin-block: 3rem 2rem;
+}
+#numbers h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-left: 3rem;
+}
+#numbers span {
+  font-size: 15px;
+  color: hsl(0, 0%, 48%);
+  margin-left: 3rem;
+}
+
+#backed, #backers {
+  width: 230px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#backed::after, #backers::after {
+  content: "";
+  border-right: 1px solid hsla(0, 0%, 48%, 0.274);
+  display: inline-block;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#days {
+  width: 230px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#progress-bar {
+  width: 87.5%;
+  height: 0.75rem;
+  background-color: hsl(0, 0%, 92%);
+  border-radius: 20px;
+  align-self: center;
+  margin-bottom: 3rem;
+}
+#progress-bar div {
+  width: 80%;
+  height: 0.75rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;

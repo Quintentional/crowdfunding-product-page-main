@@ -1,0 +1,69 @@
+#progress {
+    width: $width;
+    background-color: hsl(0, 0%, 100%);
+    border: $border;
+    border-radius: 8px;
+    @include flexVert;
+    align-self: center;
+}
+
+#numbers {
+    display: flex;
+    margin-block: 3rem 2rem;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        margin-left: 3rem;
+    }
+
+    span {
+        font-size: 15px;
+        color: hsl(0, 0%, 48%);
+        margin-left: 3rem;
+    }
+}
+
+#backed {
+    width: 230px;
+    position: relative;
+    @include flexVert;
+
+    &::after {
+        content: '';
+        border-right: 1px solid hsla(0, 0%, 48%, 0.274);
+        display: inline-block;
+        height: 4rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+#backers {
+    @extend #backed;
+}
+
+#days {
+    width: 230px;
+    position: relative;
+    @include flexVert;
+}
+
+#progress-bar {
+    width: 87.5%;
+    height: .75rem;
+    background-color: hsl(0, 0%, 92%);
+    border-radius: 20px;
+    align-self: center;
+    margin-bottom: 3rem;
+
+    div {
+        width: 80%;
+        height: .75rem;
+        background-color: hsl(176, 50%, 47%);
+        border-radius: 20px;
+    }
+}
+
