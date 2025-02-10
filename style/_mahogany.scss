@@ -1,0 +1,70 @@
+#mahogany {
+    width: 39.68rem;
+    border: $border;
+    border-radius: 10px;
+    align-self: center;
+    margin-block: .5rem 3rem;
+    padding-bottom: .5rem;
+    
+        &-top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+    
+            & h3 {
+                margin: 2.25rem 0 1.5rem 2rem;
+                opacity: .50;
+            }
+        }
+    
+        &-pledge {
+            margin: 2.25rem 2rem 1.5rem 0;
+            color: hsl(176, 50%, 47%, 0.45);
+            font-weight: 500;
+    
+        }
+    
+        &-description {
+            
+            width: 36rem;
+            line-height: 1.8;
+            color: hsl(0, 0%, 48%, 0.45);
+            margin: 0 0 2rem 2rem;
+        }
+    
+        &-bot {
+            @extend #bamboo-top;
+        }
+    
+        &-quantity {
+            color: hsl(0, 0%, 48%, 0.45);
+            font-size: 14px;
+            margin: 0 0 2.2rem 2rem;
+            display: flex;
+        }
+    
+        &-number {
+            color: hsl(0, 0%, 0%, 0.45);
+            font-size: 32px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-left {
+            align-self: center;
+        }
+    
+        button {
+            background-color: hsla(0, 0%, 48%, 0.45);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            width: 10rem;
+            height: 3rem;
+            margin-right: 2rem;
+
+        }
+    }

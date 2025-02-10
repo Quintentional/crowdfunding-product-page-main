@@ -47,6 +47,11 @@
         background-color: hsl(176, 50%, 47%);
         color: hsl(0, 0%, 100%);
         margin-left: 3rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: hsl(176, 72%, 28%);
+        }
     }
 
     #bookmark {
@@ -59,6 +64,14 @@
         span {
             color: hsl(0, 0%, 48%);
             margin-right: 2rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover circle {
+            fill: hsl(0, 0%, 48%);
         }
     }
 

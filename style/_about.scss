@@ -1,0 +1,22 @@
+#about {
+    width: $width;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    border: $border;
+    align-self: center;
+    @include flexVert;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    &-h {
+        margin: 3rem 0 3rem .75rem;
+    }
+
+    .about-p {
+        width: 40rem;
+        line-height: 1.8;
+        color: hsl(0, 0%, 48%);
+        margin: 0 0 2rem .75rem;
+    }
+}
+

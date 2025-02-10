@@ -1,8 +1,11 @@
 header {
+    width: 90rem;
     height: 25rem;
     background-image: url(../images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
+    align-self: center;
 
     svg {
         margin: 3rem 0 0 10.25rem;

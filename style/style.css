@@ -1,8 +1,11 @@
 header {
+  width: 90rem;
   height: 25rem;
   background-image: url(../images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
+  align-self: center;
 }
 header svg {
   margin: 3rem 0 0 10.25rem;
@@ -69,6 +72,10 @@ nav a:not(:last-child) {
   color: hsl(0, 0%, 100%);
   margin-left: 3rem;
 }
+#project-bot #back:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
 #project-bot #bookmark {
   width: 175px;
   display: flex;
@@ -80,6 +87,12 @@ nav a:not(:last-child) {
   color: hsl(0, 0%, 48%);
   margin-right: 2rem;
 }
+#project-bot #bookmark:hover {
+  cursor: pointer;
+}
+#project-bot #bookmark:hover circle {
+  fill: hsl(0, 0%, 48%);
+}
 
 #progress {
   width: 730px;
@@ -89,6 +102,7 @@ nav a:not(:last-child) {
   display: flex;
   flex-direction: column;
   align-self: center;
+  margin-top: -4.25rem;
 }
 
 #numbers {
@@ -145,6 +159,254 @@ nav a:not(:last-child) {
   border-radius: 20px;
 }
 
+#about {
+  width: 730px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+#about-h {
+  margin: 3rem 0 3rem 0.75rem;
+}
+#about .about-p {
+  width: 40rem;
+  line-height: 1.8;
+  color: hsl(0, 0%, 48%);
+  margin: 0 0 2rem 0.75rem;
+}
+
+#bamboo {
+  width: 39.68rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 10px;
+  align-self: center;
+  margin-block: 0.5rem 1rem;
+  padding-bottom: 0.5rem;
+}
+#bamboo-top, #mahogany-bot, #black-bot, #bamboo-bot {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#bamboo-top h3, #mahogany-bot h3, #black-bot h3, #bamboo-bot h3 {
+  margin: 2.25rem 0 1.5rem 2rem;
+}
+#bamboo-pledge {
+  margin: 2.25rem 2rem 1.5rem 0;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+#bamboo-description {
+  width: 36rem;
+  line-height: 1.8;
+  color: hsl(0, 0%, 48%);
+  margin: 0 0 2rem 2rem;
+}
+#bamboo-quantity {
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+  margin: 0 0 2.2rem 2rem;
+  display: flex;
+}
+#bamboo-number {
+  color: hsl(0, 0%, 0%);
+  font-size: 32px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#bamboo-left {
+  align-self: center;
+}
+#bamboo button {
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 10rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+#bamboo button:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
+
+#black {
+  width: 39.68rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 10px;
+  align-self: center;
+  margin-block: 0.5rem 1rem;
+  padding-bottom: 0.5rem;
+}
+#black-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#black-top h3 {
+  margin: 2.25rem 0 1.5rem 2rem;
+}
+#black-pledge {
+  margin: 2.25rem 2rem 1.5rem 0;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+#black-description {
+  width: 36rem;
+  line-height: 1.8;
+  color: hsl(0, 0%, 48%);
+  margin: 0 0 2rem 2rem;
+}
+#black-quantity {
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+  margin: 0 0 2.2rem 2rem;
+  display: flex;
+}
+#black-number {
+  color: hsl(0, 0%, 0%);
+  font-size: 32px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#black-left {
+  align-self: center;
+}
+#black button {
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 10rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+#black button:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
+
+#mahogany {
+  width: 39.68rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 10px;
+  align-self: center;
+  margin-block: 0.5rem 3rem;
+  padding-bottom: 0.5rem;
+}
+#mahogany-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#mahogany-top h3 {
+  margin: 2.25rem 0 1.5rem 2rem;
+  opacity: 0.5;
+}
+#mahogany-pledge {
+  margin: 2.25rem 2rem 1.5rem 0;
+  color: hsla(176, 50%, 47%, 0.45);
+  font-weight: 500;
+}
+#mahogany-description {
+  width: 36rem;
+  line-height: 1.8;
+  color: hsla(0, 0%, 48%, 0.45);
+  margin: 0 0 2rem 2rem;
+}
+#mahogany-quantity {
+  color: hsla(0, 0%, 48%, 0.45);
+  font-size: 14px;
+  margin: 0 0 2.2rem 2rem;
+  display: flex;
+}
+#mahogany-number {
+  color: hsla(0, 0%, 0%, 0.45);
+  font-size: 32px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#mahogany-left {
+  align-self: center;
+}
+#mahogany button {
+  background-color: hsla(0, 0%, 48%, 0.45);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 10rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.329);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+}
+
+#complete {
+  width: 33.75rem;
+  height: 28.125rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 29rem;
+}
+#complete img {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-block: 3rem;
+}
+#complete h3 {
+  font-size: 24px;
+  margin-bottom: 1.2rem;
+}
+#complete p {
+  width: 28rem;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8rem;
+  margin-bottom: 2.375rem;
+}
+#complete button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+}
+#complete button:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -158,10 +420,15 @@ body {
   font-family: "Commissioner", serif;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 #layout {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+h3 {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
