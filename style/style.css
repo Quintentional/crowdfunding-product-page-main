@@ -407,6 +407,504 @@ nav a:not(:last-child) {
   background-color: hsl(176, 72%, 28%);
 }
 
+#modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.329);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+#modal-overlay #modal {
+  width: 730px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  top: 11.5rem;
+  padding-bottom: 1.5rem;
+}
+#modal-overlay #modal img {
+  width: 1rem;
+  height: 1rem;
+  align-self: flex-end;
+  margin: 2rem 2rem 0 0;
+}
+#modal-overlay #modal h2 {
+  margin: 0 0 1rem 3rem;
+}
+#modal-overlay #modal-p {
+  margin: 0 0 2rem 3rem;
+  color: hsl(0, 0%, 48%);
+}
+
+#modal-pledge {
+  width: 39.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 0 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#modal-pledge:hover {
+  border: 2px solid hsl(176, 50%, 47%);
+}
+#modal-pledge-select {
+  display: flex;
+}
+#modal-pledge-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 50px;
+  margin: 2rem 1.5rem 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal-pledge-radio-button {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  display: none;
+}
+#modal-pledge h4 {
+  margin-block: 2rem 1rem;
+}
+#modal-pledge-p {
+  width: 34rem;
+  font-size: 15px;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8;
+  margin: 0 0 2rem 4.75rem;
+}
+#modal-pledge-enter {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#modal-pledge-enter::after {
+  content: "";
+  width: 100%;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+  position: absolute;
+  top: 0;
+}
+#modal-pledge-enter p {
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+  margin: 2.5rem 0 2rem 1.75rem;
+}
+#modal-pledge-enter-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modal-pledge-enter-amount {
+  width: 5.5rem;
+  height: 2.75rem;
+  border: 2px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+#modal-pledge-enter-amount span {
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.253);
+  font-weight: 800;
+  margin-inline: 1.25rem 0.5rem;
+}
+#modal-pledge-enter-amount input {
+  width: 50%;
+  font-weight: 800;
+  border: none;
+  outline: none;
+}
+#modal-pledge-enter button {
+  width: 6rem;
+  height: 2.75rem;
+  font-family: "Commissioner", serif;
+  font-weight: 500;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  margin-inline: 1rem 1.5rem;
+}
+#modal-pledge-enter button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+#modal-bamboo {
+  width: 39.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 0 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#modal-bamboo:hover {
+  border: 2px solid hsl(176, 50%, 47%);
+}
+#modal-bamboo-select {
+  display: flex;
+}
+#modal-bamboo-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 50px;
+  margin: 2rem 1.5rem 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal-bamboo-radio-button {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  display: none;
+}
+#modal-bamboo h4 {
+  margin-block: 2rem 1.25rem;
+}
+#modal-bamboo-pledge {
+  font-weight: 600;
+  color: hsl(176, 50%, 47%);
+  margin: 2rem 0 1rem 1.25rem;
+}
+#modal-bamboo-quantity {
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+  margin: 1.25rem 0 0 12.5rem;
+  display: flex;
+  justify-self: flex-end;
+}
+#modal-bamboo-number {
+  color: hsl(0, 0%, 0%);
+  font-size: 18px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#modal-bamboo-left {
+  font-size: 14px;
+  align-self: center;
+}
+#modal-bamboo-p {
+  width: 34rem;
+  font-size: 15px;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8;
+  margin: 0 0 1.75rem 4.75rem;
+}
+#modal-bamboo-enter {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#modal-bamboo-enter::after {
+  content: "";
+  width: 100%;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+  position: absolute;
+  top: 0;
+}
+#modal-bamboo-enter p {
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+  margin: 2.5rem 0 2rem 1.75rem;
+}
+#modal-bamboo-enter-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modal-bamboo-enter-amount {
+  width: 5.5rem;
+  height: 2.75rem;
+  border: 2px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+#modal-bamboo-enter-amount span {
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.253);
+  font-weight: 800;
+  margin-inline: 1.25rem 0.5rem;
+}
+#modal-bamboo-enter-amount input {
+  width: 50%;
+  font-weight: 800;
+  border: none;
+  outline: none;
+}
+#modal-bamboo-enter button {
+  width: 6rem;
+  height: 2.75rem;
+  font-family: "Commissioner", serif;
+  font-weight: 500;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  margin-inline: 1rem 1.5rem;
+}
+#modal-bamboo-enter button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+#modal-black {
+  width: 39.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 0 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#modal-black:hover {
+  border: 2px solid hsl(176, 50%, 47%);
+}
+#modal-black-select {
+  display: flex;
+}
+#modal-black-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 50px;
+  margin: 2rem 1.5rem 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal-black-radio-button {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  display: none;
+}
+#modal-black h4 {
+  margin-block: 2rem 1.25rem;
+}
+#modal-black-pledge {
+  font-weight: 600;
+  color: hsl(176, 50%, 47%);
+  margin: 2rem 0 1rem 1.25rem;
+}
+#modal-black-quantity {
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+  margin: 1.25rem 0 0 10.5rem;
+  display: flex;
+  justify-self: flex-end;
+}
+#modal-black-number {
+  color: hsl(0, 0%, 0%);
+  font-size: 18px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#modal-black-left {
+  font-size: 14px;
+  align-self: center;
+}
+#modal-black-p {
+  width: 34rem;
+  font-size: 15px;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8;
+  margin: 0 0 1.75rem 4.75rem;
+}
+#modal-black-enter {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#modal-black-enter::after {
+  content: "";
+  width: 100%;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+  position: absolute;
+  top: 0;
+}
+#modal-black-enter p {
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+  margin: 2.5rem 0 2rem 1.75rem;
+}
+#modal-black-enter-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modal-black-enter-amount {
+  width: 5.5rem;
+  height: 2.75rem;
+  border: 2px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+#modal-black-enter-amount span {
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.253);
+  font-weight: 800;
+  margin-inline: 1.25rem 0.5rem;
+}
+#modal-black-enter-amount input {
+  width: 50%;
+  font-weight: 800;
+  border: none;
+  outline: none;
+}
+#modal-black-enter button {
+  width: 6rem;
+  height: 2.75rem;
+  font-family: "Commissioner", serif;
+  font-weight: 500;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  margin-inline: 1rem 1.5rem;
+}
+#modal-black-enter button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+#modal-mahogany {
+  width: 39.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.075);
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 0 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#modal-mahogany-select {
+  display: flex;
+}
+#modal-mahogany-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 50px;
+  margin: 2rem 1.5rem 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal-mahogany-radio-button {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  display: none;
+}
+#modal-mahogany h4 {
+  margin-block: 2rem 1.25rem;
+  color: hsla(0, 0%, 0%, 0.45);
+}
+#modal-mahogany-pledge {
+  font-weight: 600;
+  color: hsla(176, 50%, 47%, 0.45);
+  margin: 2rem 0 1rem 1.25rem;
+}
+#modal-mahogany-quantity {
+  color: hsla(0, 0%, 48%, 0.45);
+  font-size: 14px;
+  margin: 1.25rem 0 0 7.5rem;
+  display: flex;
+  justify-self: flex-end;
+}
+#modal-mahogany-number {
+  color: hsla(0, 0%, 0%, 0.45);
+  font-size: 18px;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 8px;
+}
+#modal-mahogany-left {
+  font-size: 14px;
+  align-self: center;
+}
+#modal-mahogany-p {
+  width: 34rem;
+  font-size: 15px;
+  color: hsla(0, 0%, 48%, 0.45);
+  line-height: 1.8;
+  margin: 0 0 1.75rem 4.75rem;
+}
+#modal-mahogany-enter {
+  display: none;
+  justify-content: space-between;
+  position: relative;
+}
+#modal-mahogany-enter::after {
+  content: "";
+  width: 100%;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+  position: absolute;
+  top: 0;
+}
+#modal-mahogany-enter p {
+  font-size: 14px;
+  color: hsla(0, 0%, 48%, 0.45);
+  margin: 2.5rem 0 2rem 1.75rem;
+}
+#modal-mahogany-enter-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modal-mahogany-enter-amount {
+  width: 5.5rem;
+  height: 2.75rem;
+  border: 2px solid hsla(0, 0%, 48%, 0.158);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+#modal-mahogany-enter-amount span {
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.253);
+  font-weight: 800;
+  margin-inline: 1.25rem 0.5rem;
+}
+#modal-mahogany-enter-amount input {
+  width: 50%;
+  font-weight: 800;
+  border: none;
+  outline: none;
+}
+#modal-mahogany-enter button {
+  width: 6rem;
+  height: 2.75rem;
+  font-family: "Commissioner", serif;
+  font-weight: 500;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  margin-inline: 1rem 1.5rem;
+}
+#modal-mahogany-enter button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
 * {
   margin: 0;
   padding: 0;

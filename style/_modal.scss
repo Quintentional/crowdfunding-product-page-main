@@ -1,0 +1,585 @@
+#modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.329);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    #modal {
+        width: $width;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        @include flexVert;
+        align-self: center;
+        top: 11.5rem;
+        padding-bottom: 1.5rem;
+
+        img {
+            width: 1rem;
+            height: 1rem;
+            align-self: flex-end;
+            margin: 2rem 2rem 0 0;
+        }
+
+        h2 {
+            margin: 0 0 1rem 3rem;
+        }
+
+        &-p {
+            margin: 0 0 2rem 3rem;
+            color: hsl(0, 0%, 48%);
+        }
+    }
+}
+
+// ----------------------------Modal-Pledge-----------------------------------------------------
+
+
+#modal-pledge {
+    width: 39.5rem;
+    border: $border;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 3rem;
+    @include flexVert;
+
+    &:hover {
+        border: 2px solid hsl(176, 50%, 47%);
+    }
+
+    &-select {
+        display: flex;
+    }
+
+    &-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: $border;
+        border-radius: 50px;
+        margin: 2rem 1.5rem 0 1.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-button {
+            width: .75rem;
+            height: .75rem;
+            background-color: hsl(176, 50%, 47%);
+            border-radius: 50%;
+            display: none;
+        }
+    }
+
+    h4 {
+        margin-block: 2rem 1rem;
+    }
+
+     &-p {
+        width: 34rem;
+        font-size: 15px;
+        color: hsl(0, 0%, 48%);
+        line-height: 1.8;
+        margin: 0 0 2rem 4.75rem;
+    }
+
+    &-enter {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+            position: absolute;
+            top: 0;
+        }
+
+        & p {
+            font-size: 14px;
+            color: hsl(0, 0%, 48%);
+            margin: 2.5rem 0 2rem 1.75rem;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-amount {
+            width: 5.5rem;
+            height: 2.75rem;
+            border: 2px solid hsla(0, 0%, 48%, 0.158);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                color:hsla(0, 0%, 0%, 0.253);
+                font-weight: 800;
+                margin-inline: 1.25rem .5rem;
+            }
+
+            input {
+                width: 50%;
+                font-weight: 800;
+                border: none;
+                outline: none;
+            }
+        }
+
+        & button {
+            width: 6rem;
+            height: 2.75rem;
+            font-family: "Commissioner", serif;
+            font-weight: 500;
+            background-color: hsl(176, 50%, 47%);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 25px;
+            margin-inline: 1rem 1.5rem;
+
+            &:hover {
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+    }
+}
+
+// ----------------------------Modal-Bamboo-----------------------------------------------------
+
+
+#modal-bamboo {
+    width: 39.5rem;
+    border: $border;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 3rem;
+    @include flexVert;
+
+    &:hover {
+        border: 2px solid hsl(176, 50%, 47%);
+    }
+
+    &-select {
+        display: flex;
+    }
+
+    &-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: $border;
+        border-radius: 50px;
+        margin: 2rem 1.5rem 0 1.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-button {
+            width: .75rem;
+            height: .75rem;
+            background-color: hsl(176, 50%, 47%);
+            border-radius: 50%;
+            display: none;
+        }
+    }
+
+    h4 {
+        margin-block: 2rem 1.25rem;
+    }
+
+    &-pledge {
+        font-weight: 600;
+        color: hsl(176, 50%, 47%);
+        margin: 2rem 0 1rem 1.25rem;
+    }
+
+    &-quantity {
+        color: hsl(0, 0%, 48%);
+        font-size: 14px;
+        margin: 1.25rem 0 0 12.5rem;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    &-number {
+        color: hsl(0, 0%, 0%);
+        font-size: 18px;
+        font-weight: 700;
+        align-self: center;
+        margin-right: 8px;
+    }
+
+    &-left {
+        font-size: 14px;
+        align-self: center;
+    }
+
+     &-p {
+        width: 34rem;
+        font-size: 15px;
+        color: hsl(0, 0%, 48%);
+        line-height: 1.8;
+        margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-enter {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+            position: absolute;
+            top: 0;
+        }
+
+        & p {
+            font-size: 14px;
+            color: hsl(0, 0%, 48%);
+            margin: 2.5rem 0 2rem 1.75rem;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-amount {
+            width: 5.5rem;
+            height: 2.75rem;
+            border: 2px solid hsla(0, 0%, 48%, 0.158);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                color:hsla(0, 0%, 0%, 0.253);
+                font-weight: 800;
+                margin-inline: 1.25rem .5rem;
+            }
+
+            input {
+                width: 50%;
+                font-weight: 800;
+                border: none;
+                outline: none;
+            }
+        }
+
+        & button {
+            width: 6rem;
+            height: 2.75rem;
+            font-family: "Commissioner", serif;
+            font-weight: 500;
+            background-color: hsl(176, 50%, 47%);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 25px;
+            margin-inline: 1rem 1.5rem;
+
+            &:hover {
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+    }
+
+}
+
+
+// ----------------------------Modal-Black-----------------------------------------------------
+
+
+#modal-black {
+    width: 39.5rem;
+    border: $border;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 3rem;
+    @include flexVert;
+
+    &:hover {
+        border: 2px solid hsl(176, 50%, 47%);
+    }
+
+    &-select {
+        display: flex;
+    }
+
+    &-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: $border;
+        border-radius: 50px;
+        margin: 2rem 1.5rem 0 1.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-button {
+            width: .75rem;
+            height: .75rem;
+            background-color: hsl(176, 50%, 47%);
+            border-radius: 50%;
+            display: none;
+        }
+    }
+
+    h4 {
+        margin-block: 2rem 1.25rem;
+    }
+
+    &-pledge {
+        font-weight: 600;
+        color: hsl(176, 50%, 47%);
+        margin: 2rem 0 1rem 1.25rem;
+    }
+
+    &-quantity {
+        color: hsl(0, 0%, 48%);
+        font-size: 14px;
+        margin: 1.25rem 0 0 10.5rem;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    &-number {
+        color: hsl(0, 0%, 0%);
+        font-size: 18px;
+        font-weight: 700;
+        align-self: center;
+        margin-right: 8px;
+    }
+
+    &-left {
+        font-size: 14px;
+        align-self: center;
+    }
+
+     &-p {
+        width: 34rem;
+        font-size: 15px;
+        color: hsl(0, 0%, 48%);
+        line-height: 1.8;
+        margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-enter {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+            position: absolute;
+            top: 0;
+        }
+
+        & p {
+            font-size: 14px;
+            color: hsl(0, 0%, 48%);
+            margin: 2.5rem 0 2rem 1.75rem;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-amount {
+            width: 5.5rem;
+            height: 2.75rem;
+            border: 2px solid hsla(0, 0%, 48%, 0.158);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                color:hsla(0, 0%, 0%, 0.253);
+                font-weight: 800;
+                margin-inline: 1.25rem .5rem;
+            }
+
+            input {
+                width: 50%;
+                font-weight: 800;
+                border: none;
+                outline: none;
+            }
+        }
+
+        & button {
+            width: 6rem;
+            height: 2.75rem;
+            font-family: "Commissioner", serif;
+            font-weight: 500;
+            background-color: hsl(176, 50%, 47%);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 25px;
+            margin-inline: 1rem 1.5rem;
+
+            &:hover {
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+    }
+
+}
+
+// ----------------------------Modal-Mahogany-----------------------------------------------------
+
+
+#modal-mahogany {
+    width: 39.5rem;
+    border: 1px solid hsla(0, 0%, 48%, 0.075);;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 3rem;
+    @include flexVert;
+
+
+    &-select {
+        display: flex;
+    }
+
+    &-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: $border;
+        border-radius: 50px;
+        margin: 2rem 1.5rem 0 1.75rem;
+                display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-button {
+            width: .75rem;
+            height: .75rem;
+            background-color: hsl(176, 50%, 47%);
+            border-radius: 50%;
+            display: none;
+        }
+    }
+
+    h4 {
+        margin-block: 2rem 1.25rem;
+        color:hsla(0, 0%, 0%, 0.45);
+    }
+
+    &-pledge {
+        font-weight: 600;
+        color: hsla(176, 50%, 47%, 0.45);
+        margin: 2rem 0 1rem 1.25rem;
+    }
+
+    &-quantity {
+        color: hsla(0, 0%, 48%, 0.45);
+        font-size: 14px;
+        margin: 1.25rem 0 0 7.5rem;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    &-number {
+        color: hsla(0, 0%, 0%, 0.45);
+        font-size: 18px;
+        font-weight: 700;
+        align-self: center;
+        margin-right: 8px;
+    }
+
+    &-left {
+        font-size: 14px;
+        align-self: center;
+    }
+
+     &-p {
+        width: 34rem;
+        font-size: 15px;
+        color: hsla(0, 0%, 48%, 0.45);
+        line-height: 1.8;
+        margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-enter {
+        display: none;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+            position: absolute;
+            top: 0;
+        }
+
+        & p {
+            font-size: 14px;
+            color: hsla(0, 0%, 48%, 0.45);
+            margin: 2.5rem 0 2rem 1.75rem;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-amount {
+            width: 5.5rem;
+            height: 2.75rem;
+            border: 2px solid hsla(0, 0%, 48%, 0.158);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                color:hsla(0, 0%, 0%, 0.253);
+                font-weight: 800;
+                margin-inline: 1.25rem .5rem;
+            }
+
+            input {
+                width: 50%;
+                font-weight: 800;
+                border: none;
+                outline: none;
+            }
+        }
+
+        & button {
+            width: 6rem;
+            height: 2.75rem;
+            font-family: "Commissioner", serif;
+            font-weight: 500;
+            background-color: hsl(176, 50%, 47%);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 25px;
+            margin-inline: 1rem 1.5rem;
+
+            &:hover {
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+    }
+
+
+}
