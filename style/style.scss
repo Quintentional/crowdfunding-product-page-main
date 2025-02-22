@@ -37,4 +37,28 @@ h3 {
 }
 
 
+@media (max-width: 375px) {
+
+    body {
+        width: 375px;
+        min-height: 100vh;
+        background-color: hsl(0, 0%, 96%);
+        font-family: "Commissioner", serif;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    #layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5rem;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+}
+
 

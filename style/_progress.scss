@@ -68,3 +68,49 @@
     }
 }
 
+@media (width: 375px) {
+    #progress {
+        width: 325px;
+        margin-top: -6.75rem;
+    }
+    
+    #numbers {
+        flex-direction: column;
+        margin-block: 2rem 2rem;
+        align-items: center;
+    
+        h2 {
+            font-size: 30px;   
+            margin-left: 0;
+        }
+    
+        span {
+            font-size: 14px;
+            margin-left: 0;
+        }
+    }
+    
+    #backed {
+        width: 230px;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    
+        &::after {
+            content: '';
+            border-bottom: 1px solid hsla(0, 0%, 48%, 0.274);
+            height: 0;
+            width: 5rem;
+            top: 85px;
+            right: 70px;
+        }
+    }
+    
+
+    #days {
+        align-items: center;
+    }
+    
+    #progress-bar {
+        margin-bottom: 2.5rem;
+    }
+}

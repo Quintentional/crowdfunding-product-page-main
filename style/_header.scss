@@ -26,3 +26,44 @@ nav {
         }
     }
 }
+
+#mobile-nav {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    header {
+        width: 375px;
+        height: 375px;
+        background-image: url(../images/image-hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size:contain;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    
+        svg {
+            margin: 2rem 0 0 1.5rem;
+        }
+    }
+    
+    nav {
+        display: none;
+        margin: 3rem 10rem 0 0;
+    
+        a {
+            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+            font-size: 14px;
+    
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    #mobile-nav {
+        display: inline-block;
+        margin: 2rem 1.5rem 0 0;
+    }
+}

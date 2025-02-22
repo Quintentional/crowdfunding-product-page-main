@@ -8,6 +8,7 @@
     align-self: center;
     position: relative;
     top: -92.5px;
+    display: flex;
 }
 
 #project-top {
@@ -78,3 +79,48 @@
 
 }
 
+@media (width: 375px) {
+    #project {
+        width: 325px;
+        top: -130.5px;
+    }
+    
+    #project-top {
+
+    
+        h1 {
+            width: 15rem;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    
+        p {
+            width: 18rem;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    }
+    
+    #project-bot {
+        padding-block: 1.5rem 2.5rem;
+    
+    
+        #back {
+            width: 215px;
+            margin-inline: 1.5rem .5rem;
+        }
+    
+        #bookmark {
+            width: 56px;
+            margin-right: 1.5rem;
+    
+            span {
+                display: none;
+            }
+        }
+    
+    
+    }
+}

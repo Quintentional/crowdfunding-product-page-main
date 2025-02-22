@@ -24,6 +24,41 @@ nav a:not(:last-child) {
   margin-right: 2rem;
 }
 
+#mobile-nav {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  header {
+    width: 375px;
+    height: 375px;
+    background-image: url(../images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+  header svg {
+    margin: 2rem 0 0 1.5rem;
+  }
+  nav {
+    display: none;
+    margin: 3rem 10rem 0 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+  }
+  nav a:not(:last-child) {
+    margin-right: 2rem;
+  }
+  #mobile-nav {
+    display: inline-block;
+    margin: 2rem 1.5rem 0 0;
+  }
+}
 #project {
   width: 730px;
   background-color: hsl(0, 0%, 100%);
@@ -35,6 +70,7 @@ nav a:not(:last-child) {
   align-self: center;
   position: relative;
   top: -92.5px;
+  display: flex;
 }
 
 #project-top {
@@ -94,6 +130,38 @@ nav a:not(:last-child) {
   fill: hsl(0, 0%, 48%);
 }
 
+@media (width: 375px) {
+  #project {
+    width: 325px;
+    top: -130.5px;
+  }
+  #project-top h1 {
+    width: 15rem;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #project-top p {
+    width: 18rem;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+  #project-bot {
+    padding-block: 1.5rem 2.5rem;
+  }
+  #project-bot #back {
+    width: 215px;
+    margin-inline: 1.5rem 0.5rem;
+  }
+  #project-bot #bookmark {
+    width: 56px;
+    margin-right: 1.5rem;
+  }
+  #project-bot #bookmark span {
+    display: none;
+  }
+}
 #progress {
   width: 730px;
   background-color: hsl(0, 0%, 100%);
@@ -159,6 +227,44 @@ nav a:not(:last-child) {
   border-radius: 20px;
 }
 
+@media (width: 375px) {
+  #progress {
+    width: 325px;
+    margin-top: -6.75rem;
+  }
+  #numbers {
+    flex-direction: column;
+    margin-block: 2rem 2rem;
+    align-items: center;
+  }
+  #numbers h2 {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  #numbers span {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  #backed, #backers {
+    width: 230px;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  #backed::after, #backers::after {
+    content: "";
+    border-bottom: 1px solid hsla(0, 0%, 48%, 0.274);
+    height: 0;
+    width: 5rem;
+    top: 85px;
+    right: 70px;
+  }
+  #days {
+    align-items: center;
+  }
+  #progress-bar {
+    margin-bottom: 2.5rem;
+  }
+}
 #about {
   width: 730px;
   background-color: hsl(0, 0%, 100%);
@@ -180,6 +286,21 @@ nav a:not(:last-child) {
   margin: 0 0 2rem 0.75rem;
 }
 
+@media (width: 375px) {
+  #about {
+    width: 325px;
+  }
+  #about-h {
+    margin: 2.5rem 0 1.5rem 0.75rem;
+  }
+  #about .about-p {
+    width: 17.5rem;
+    font-size: 14px;
+    line-height: 1.8;
+    color: hsl(0, 0%, 48%);
+    margin: 0 0 2rem 0.75rem;
+  }
+}
 #bamboo {
   width: 39.68rem;
   border: 1px solid hsla(0, 0%, 48%, 0.158);
@@ -238,6 +359,38 @@ nav a:not(:last-child) {
   background-color: hsl(176, 72%, 28%);
 }
 
+@media (width: 375px) {
+  #bamboo {
+    width: 275px;
+  }
+  #bamboo-top, #mahogany-bot, #black-bot, #bamboo-bot {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #bamboo-top h3, #mahogany-bot h3, #black-bot h3, #bamboo-bot h3 {
+    font-size: 14px;
+    margin: 1rem 0 0 1.5rem;
+  }
+  #bamboo-pledge {
+    font-size: 14px;
+    margin: 0.5rem 0 1.5rem 1.5rem;
+  }
+  #bamboo-description {
+    font-size: 14px;
+    width: 14.5rem;
+    margin: 0 0 2rem 1.5rem;
+  }
+  #bamboo-quantity {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+  #bamboo-left {
+    align-self: center;
+  }
+  #bamboo button {
+    margin: 0 0 1rem 1.5rem;
+  }
+}
 #black {
   width: 39.68rem;
   border: 1px solid hsla(0, 0%, 48%, 0.158);
@@ -296,6 +449,38 @@ nav a:not(:last-child) {
   background-color: hsl(176, 72%, 28%);
 }
 
+@media (width: 375px) {
+  #black {
+    width: 275px;
+  }
+  #black-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #black-top h3 {
+    font-size: 14px;
+    margin: 1rem 0 0 1.5rem;
+  }
+  #black-pledge {
+    font-size: 14px;
+    margin: 0.5rem 0 1.5rem 1.5rem;
+  }
+  #black-description {
+    font-size: 14px;
+    width: 14.5rem;
+    margin: 0 0 2rem 1.5rem;
+  }
+  #black-quantity {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+  #black-left {
+    align-self: center;
+  }
+  #black button {
+    margin: 0 0 1rem 1.5rem;
+  }
+}
 #mahogany {
   width: 39.68rem;
   border: 1px solid hsla(0, 0%, 48%, 0.158);
@@ -351,6 +536,40 @@ nav a:not(:last-child) {
   margin-right: 2rem;
 }
 
+@media (width: 375px) {
+  #mahogany {
+    width: 275px;
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+  #mahogany-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #mahogany-top h3 {
+    font-size: 14px;
+    margin: 1rem 0 0 1.5rem;
+  }
+  #mahogany-pledge {
+    font-size: 14px;
+    margin: 0.5rem 0 1.5rem 1.5rem;
+  }
+  #mahogany-description {
+    font-size: 14px;
+    width: 14.5rem;
+    margin: 0 0 2rem 1.5rem;
+  }
+  #mahogany-quantity {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+  #mahogany-left {
+    align-self: center;
+  }
+  #mahogany button {
+    margin: 0 0 1rem 1.5rem;
+  }
+}
 #overlay {
   width: 100%;
   height: 100%;
@@ -415,7 +634,7 @@ nav a:not(:last-child) {
   top: 0;
   left: 0;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 #modal-overlay #modal {
@@ -929,4 +1148,25 @@ body {
 
 h3 {
   font-size: 20px;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 375px;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 96%);
+    font-family: "Commissioner", serif;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
