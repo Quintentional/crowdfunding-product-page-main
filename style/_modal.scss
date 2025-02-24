@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    display: none;
+    display: flex;
     justify-content: center;
 
     #modal {
@@ -169,6 +169,11 @@
 
     &-select {
         display: flex;
+        flex-direction: column;
+    }
+
+    &-top {
+        display: flex;
     }
 
     &-radio {
@@ -190,6 +195,10 @@
         }
     }
 
+    &-h4-div {
+        display: flex;
+    }
+
     h4 {
         margin-block: 2rem 1.25rem;
     }
@@ -203,9 +212,10 @@
     &-quantity {
         color: hsl(0, 0%, 48%);
         font-size: 14px;
-        margin: 1.25rem 0 0 12.5rem;
+        margin: 2rem 0 0 12.5rem;
         display: flex;
         justify-self: flex-end;
+        align-self: flex-start;
     }
 
     &-number {
@@ -227,6 +237,10 @@
         color: hsl(0, 0%, 48%);
         line-height: 1.8;
         margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-mobile-quantity {
+        display: none;
     }
 
     &-enter {
@@ -314,6 +328,11 @@
 
     &-select {
         display: flex;
+        flex-direction: column;
+    }
+
+    &-top {
+        display: flex;
     }
 
     &-radio {
@@ -333,6 +352,10 @@
             border-radius: 50%;
             display: none;
         }
+    }
+
+    &-h4-div {
+        display: flex;
     }
 
     h4 {
@@ -372,6 +395,10 @@
         color: hsl(0, 0%, 48%);
         line-height: 1.8;
         margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-mobile-quantity {
+        display: none;
     }
 
     &-enter {
@@ -455,6 +482,11 @@
 
     &-select {
         display: flex;
+        flex-direction: column;
+    }
+
+    &-top {
+        display: flex;
     }
 
     &-radio {
@@ -474,6 +506,10 @@
             border-radius: 50%;
             display: none;
         }
+    }
+
+    &-h4-div {
+        display: flex;
     }
 
     h4 {
@@ -514,6 +550,10 @@
         color: hsla(0, 0%, 48%, 0.45);
         line-height: 1.8;
         margin: 0 0 1.75rem 4.75rem;
+    }
+
+    &-mobile-quantity {
+        display: none;
     }
 
     &-enter {
@@ -582,4 +622,623 @@
     }
 
 
+}
+
+@media (max-width: 375px) {
+    #modal-overlay {
+        display: flex;
+
+        #modal {
+            width: 310px;
+            align-self: flex-start;
+            margin-top: 7.5rem;
+            padding-bottom: .25rem;
+    
+            img {
+                margin: 2rem 1.5rem 0 0;
+            }
+    
+            h2 {
+                font-size: 18px;
+                margin: -1.25rem 0 1rem 1.5rem;
+            }
+    
+            &-p {
+                font-size: 13px;
+                line-height: 1.8;
+                margin: .5rem 0 1.25rem 1.5rem;
+            }
+        }
+    }
+    
+    // ----------------------------Modal-Pledge-----------------------------------------------------
+    
+    
+    #modal-pledge {
+        width: 16.5rem;
+        border: 1px solid hsla(0, 0%, 48%, 0.39);
+        border-radius: 8px;
+        margin: 0 0 1.5rem 0;
+        align-self: center;
+    
+        &-select {
+            display: flex;
+        }
+    
+        &-radio {
+            border: 1px solid hsla(0, 0%, 48%, 0.308);
+            margin: 2rem 1rem 0 1.5rem;
+    
+            &-button {
+                display: none;
+            }
+        }
+    
+        h4 {
+            font-size: 14px;
+            margin-block: 2rem 1.75rem;
+        }
+    
+         &-p {
+            width: 13rem;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0 0 2rem 1.5rem;
+        }
+    
+        &-enter {
+            display: none;
+            flex-direction: column;
+            position: relative;
+    
+    
+            & p {
+                font-size: 13px;
+                color: hsl(0, 0%, 48%);
+                margin: 2rem 0 1.25rem 0;
+                align-self: center;
+            }
+    
+            &-right {
+                justify-content: space-between;
+                padding-bottom: 1.5rem;
+            }
+    
+            &-amount {
+
+                margin-left: 1.5rem;
+    
+            }
+    
+            & button {
+                width: 7rem;
+                margin-right: 1.5rem;
+
+            }
+        }
+    }
+    
+    // ----------------------------Modal-Bamboo-----------------------------------------------------
+    
+    
+    #modal-bamboo {
+        width: 16.5rem;
+        border: 1px solid hsla(0, 0%, 48%, 0.39);
+        border-radius: 8px;
+        margin: 0 0 1.5rem 0;
+        align-self: center;
+        @include flexVert;
+    
+    
+        &-select {
+            display: flex;
+        }
+
+        &-top {
+            width: 100%;
+        }
+    
+        &-radio {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: $border;
+            border-radius: 50px;
+            margin: 2rem 1.5rem 0 1.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &-button {
+                width: .75rem;
+                height: .75rem;
+                background-color: hsl(176, 50%, 47%);
+                border-radius: 50%;
+                display: none;
+            }
+        }
+
+        &-h4-div {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h4 {
+            font-size: 14px;
+            width: 10rem;
+            margin-block: 2rem .5rem;
+        }
+    
+        &-pledge {
+            font-size: 14px;
+            font-weight: 600;
+            color: hsl(176, 50%, 47%);
+            margin: 0 0 1rem 0;
+        }
+    
+        &-quantity {
+            display: none;
+        }
+    
+        &-number {
+            color: hsl(0, 0%, 0%);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+         &-p {
+            width: 13.5rem;
+            line-height: 1.8;
+            font-size: 13px;
+            margin: 1rem 0 0 0;
+            align-self: center;
+        }
+
+        &-mobile-quantity {
+            color: hsl(0, 0%, 48%);
+            font-size: 14px;
+            margin: 1.25rem 0 1.5rem 1.5rem;
+            display: flex;
+            justify-self: flex-start;
+        }
+
+        &-mobile-number {
+            color: hsl(0, 0%, 0%);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-mobile-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+        &-enter {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+    
+            &::after {
+                content: '';
+                width: 100%;
+                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+                position: absolute;
+                top: 0;
+            }
+    
+            & p {
+                font-size: 14px;
+                color: hsl(0, 0%, 48%);
+                margin: 2.5rem 0 1.5rem 0;
+                align-self: center;
+            }
+    
+            &-right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            &-amount {
+                width: 5.5rem;
+                height: 2.75rem;
+                border: 2px solid hsla(0, 0%, 48%, 0.158);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+    
+                span {
+                    font-size: 14px;
+                    color:hsla(0, 0%, 0%, 0.253);
+                    font-weight: 800;
+                    margin-inline: 1.25rem .5rem;
+                }
+    
+                input {
+                    width: 50%;
+                    font-weight: 800;
+                    border: none;
+                    outline: none;
+                }
+            }
+    
+            & button {
+                width: 6rem;
+                height: 2.75rem;
+                font-family: "Commissioner", serif;
+                font-weight: 500;
+                background-color: hsl(176, 50%, 47%);
+                color: hsl(0, 0%, 100%);
+                border: none;
+                border-radius: 25px;
+                margin-inline: 1rem 1.5rem;
+    
+                &:hover {
+                    background-color: hsl(176, 72%, 28%);
+                }
+            }
+        }
+    
+    }
+    
+    
+    // ----------------------------Modal-Black-----------------------------------------------------
+    
+    
+    #modal-black {
+        width: 16.5rem;
+        border: 1px solid hsla(0, 0%, 48%, 0.39);
+        border-radius: 8px;
+        margin: 0 0 1.5rem 0;
+        align-self: center;
+        @include flexVert;
+    
+    
+        &-select {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-top {
+            width: 100%;
+            display: flex;
+        }
+    
+        &-radio {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: $border;
+            border-radius: 50px;
+            margin: 2rem 1.5rem 0 1.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &-button {
+                width: .75rem;
+                height: .75rem;
+                background-color: hsl(176, 50%, 47%);
+                border-radius: 50%;
+                display: none;
+            }
+        }
+
+        &-h4-div {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h4 {
+            font-size: 14px;
+            width: 10rem;
+            margin-block: 2rem .5rem;
+        }
+    
+        &-pledge {
+            font-size: 14px;
+            font-weight: 600;
+            color: hsl(176, 50%, 47%);
+            margin: 0 0 1rem 0;
+        }
+    
+        &-quantity {
+            display: none;
+        }
+    
+        &-number {
+            color: hsl(0, 0%, 0%);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+         &-p {
+            width: 13.5rem;
+            line-height: 1.8;
+            font-size: 13px;
+            margin: 1rem 0 0 0;
+            align-self: center;
+        }
+
+        &-mobile-quantity {
+            color: hsl(0, 0%, 48%);
+            font-size: 14px;
+            margin: 1.25rem 0 1.5rem 1.5rem;
+            display: flex;
+            justify-self: flex-start;
+        }
+
+        &-mobile-number {
+            color: hsl(0, 0%, 0%);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-mobile-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+        &-enter {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+    
+            &::after {
+                content: '';
+                width: 100%;
+                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+                position: absolute;
+                top: 0;
+            }
+    
+            & p {
+                font-size: 14px;
+                color: hsl(0, 0%, 48%);
+                margin: 2.5rem 0 1.5rem 0;
+                align-self: center;
+            }
+    
+            &-right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            &-amount {
+                width: 5.5rem;
+                height: 2.75rem;
+                border: 2px solid hsla(0, 0%, 48%, 0.158);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+    
+                span {
+                    font-size: 14px;
+                    color:hsla(0, 0%, 0%, 0.253);
+                    font-weight: 800;
+                    margin-inline: 1.25rem .5rem;
+                }
+    
+                input {
+                    width: 50%;
+                    font-weight: 800;
+                    border: none;
+                    outline: none;
+                }
+            }
+    
+            & button {
+                width: 6rem;
+                height: 2.75rem;
+                font-family: "Commissioner", serif;
+                font-weight: 500;
+                background-color: hsl(176, 50%, 47%);
+                color: hsl(0, 0%, 100%);
+                border: none;
+                border-radius: 25px;
+                margin-inline: 1rem 1.5rem;
+    
+                &:hover {
+                    background-color: hsl(176, 72%, 28%);
+                }
+            }
+        }
+    
+    }
+    
+    
+    // ----------------------------Modal-Mahogany-----------------------------------------------------
+    
+    
+    #modal-mahogany {
+        width: 16.5rem;
+        border: 1px solid hsla(0, 0%, 48%, 0.39);
+        border-radius: 8px;
+        margin: 0 0 1.5rem 0;
+        align-self: center;
+        @include flexVert;
+    
+    
+        &-select {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-top {
+            width: 100%;
+            display: flex;
+        }
+    
+        &-radio {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: $border;
+            border-radius: 50px;
+            margin: 2rem 1.5rem 0 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &-button {
+                width: .75rem;
+                height: .75rem;
+                background-color: hsl(176, 50%, 47%);
+                border-radius: 50%;
+                display: none;
+            }
+        }
+
+        &-h4-div {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h4 {
+            font-size: 14px;
+            width: 12rem;
+            margin-block: 2rem .5rem;
+        }
+    
+        &-pledge {
+            font-size: 14px;
+            font-weight: 600;
+            color: hsla(176, 50%, 47%, 0.45);
+            margin: 0 0 1rem 0;
+        }
+    
+        &-quantity {
+            display: none;
+        }
+    
+        &-number {
+            color: hsla(0, 0%, 0%, 0.45);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+         &-p {
+            width: 13.5rem;
+            line-height: 1.8;
+            font-size: 13px;
+            margin: 1rem 0 0 0;
+            align-self: center;
+        }
+
+        &-mobile-quantity {
+            color: hsl(0, 0%, 48%);
+            font-size: 14px;
+            margin: 1.25rem 0 1.5rem 1.5rem;
+            display: flex;
+            justify-self: flex-start;
+        }
+
+        &-mobile-number {
+            color: hsl(0, 0%, 0%);
+            font-size: 18px;
+            font-weight: 700;
+            align-self: center;
+            margin-right: 8px;
+        }
+    
+        &-mobile-left {
+            font-size: 14px;
+            align-self: center;
+        }
+    
+    
+        &-enter {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+    
+            &::after {
+                content: '';
+                width: 100%;
+                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
+                position: absolute;
+                top: 0;
+            }
+    
+            & p {
+                font-size: 14px;
+                color: hsla(0, 0%, 48%, 0.45);
+                margin: 2rem 0 1.5rem 0;
+                align-self: center;
+            }
+    
+            &-right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            &-amount {
+                width: 5.5rem;
+                height: 2.75rem;
+                border: 2px solid hsla(0, 0%, 48%, 0.158);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+    
+                span {
+                    font-size: 14px;
+                    color:hsla(0, 0%, 0%, 0.253);
+                    font-weight: 800;
+                    margin-inline: 1.25rem .5rem;
+                }
+    
+                input {
+                    width: 50%;
+                    font-weight: 800;
+                    border: none;
+                    outline: none;
+                }
+            }
+    
+            & button {
+                width: 6rem;
+                height: 2.75rem;
+                font-family: "Commissioner", serif;
+                font-weight: 500;
+                background-color: hsl(176, 50%, 47%);
+                color: hsl(0, 0%, 100%);
+                border: none;
+                border-radius: 25px;
+                margin-inline: 1rem 1.5rem;
+    
+                &:hover {
+                    background-color: hsl(176, 72%, 28%);
+                }
+            }
+        }
+    
+    
+    }
 }
