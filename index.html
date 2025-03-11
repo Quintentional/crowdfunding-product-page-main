@@ -64,13 +64,14 @@
 
       <div id="project-bot">
         <button id="back">Back this project</button>
-        <button id="bookmark"><svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+        <button id="bookmark">
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
-              <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
-              <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+              <circle id= 'circle-fill' fill="#2F2F2F" cx="28" cy="28" r="28" />
+              <path id= 'path-fill' fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
             </g>
           </svg>
-          <span>Bookmark</span></button>
+          <span id="bookmark-span">Bookmark</span></button>
       </div>
     </section>
 
@@ -110,7 +111,7 @@
         </div>
       </article>
 
-      <article id="bamboo">
+      <article id="bamboo" class="reward">
         <div id="bamboo-top">
           <h3>Bamboo Stand</h3>
           <p id="bamboo-pledge">Pledge $25 or more</p>
@@ -121,11 +122,11 @@
         </p>
         <div id="bamboo-bot">
           <p id="bamboo-quantity"><span id="bamboo-number">101</span> <span id="bamboo-left">left</span></p>
-          <button>Select Reward</button>
+          <button id="bamboo-select" class="select-reward" data-reward-id="1">Select Reward</button>
         </div>
       </article>
 
-      <article id="black">
+      <article id="black" class="reward">
         <div id="black-top">
           <h3>Black Edition Stand</h3>
           <p id="black-pledge">Pledge $75 or more</p>
@@ -136,7 +137,7 @@
         </p>
         <div id="black-bot">
           <p id="black-quantity"><span id="black-number">64</span> <span id="black-left">left</span></p>
-          <button>Select Reward</button>
+          <button id="black-select" class="select-reward" data-reward-id="2">Select Reward</button>
         </div>
       </article>
 
@@ -164,33 +165,33 @@
       <h3 id="thanks">Thanks for your support!</h3>
       <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
         an email once our campaign is completed.</p>
-      <button>Got it!</button>
+      <button id="refresh">Got it!</button>
     </section>
   </div>
 
   <div id="modal-overlay">
     <section id="modal">
       <!-- Selection modal start -->
-      <img src="./images/icon-close-modal.svg" alt="x">
+      <img id="modal-close" src="./images/icon-close-modal.svg" alt="x">
       <h2>Back this project</h2>
       <p id="modal-p">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-      <article id="modal-pledge">
+      <article id="modal-pledge" class="modal-section">
         <div id="modal-pledge-select">
-          <div id="modal-pledge-radio">
-            <div id="modal-pledge-radio-button"></div>
+          <div id="modal-pledge-radio" class="radio">
+            <div id="modal-pledge-radio-button" class="radio-button"></div>
           </div>
           <h4>Pledge with no reward</h4>
         </div>
         <p id="modal-pledge-p">Choose to support us without a reward if you simply believe in our project. As a backer,
           you will be signed up to receive product updates via email.</p>
 
-        <div id="modal-pledge-enter">
+        <div id="modal-pledge-enter" class="modal-enter">
           <p>Enter your pledge</p>
           <form id="modal-pledge-enter-right">
             <div id="modal-pledge-enter-amount">
               <span>$</span>
-              <input type="text"></input>
+              <input type="text" id="modal-pledge-input" name="modal-pledge-input"></input>
             </div>
 
             <button>Continue</button>
@@ -198,11 +199,11 @@
         </div>
       </article>
 
-      <article id="modal-bamboo">
+      <article id="modal-bamboo" class="modal-section modal-section-with-id" data-reward-id="1">
         <div id="modal-bamboo-select">
           <div id="modal-bamboo-top">
-            <div id="modal-bamboo-radio">
-              <div id="modal-bamboo-radio-button"></div>
+            <div id="modal-bamboo-radio" class="radio">
+              <div id="modal-bamboo-radio-button" class="radio-button"></div>
             </div>
             <div id="modal-bamboo-h4-div">
               <h4>Bamboo Stand</h4>
@@ -218,12 +219,12 @@
         <p id="modal-bamboo-mobile-quantity"><span id="modal-bamboo-mobile-number">101</span> <span
             id="modal-bamboo-mobile-left">left</span></p>
         <!-- Selected pledge start -->
-        <div id="modal-bamboo-enter">
+        <div id="modal-bamboo-enter" class="modal-enter">
           <p>Enter your pledge</p>
-          <form id="modal-pledge-enter-right">
-            <div id="modal-pledge-enter-amount">
+          <form id="modal-bamboo-enter-right">
+            <div id="modal-bamboo-enter-amount">
               <span>$</span>
-              <input type="text"></input>
+              <input type="text" id="modal-bamboo-input" name="modal-bamboo-input"></input>
             </div>
 
             <button>Continue</button>
@@ -232,11 +233,11 @@
         <!-- Selected pledge end -->
       </article>
 
-      <article id="modal-black">
+      <article id="modal-black" class="modal-section modal-section-with-id" data-reward-id="2">
         <div id="modal-black-select">
           <div id="modal-black-top">
-            <div id="modal-black-radio">
-              <div id="modal-black-radio-button"></div>
+            <div id="modal-black-radio" class="radio">
+              <div id="modal-black-radio-button" class="radio-button"></div>
             </div>
             <div id="modal-black-h4-div">
               <h4>Black Edition Stand</h4>
@@ -252,12 +253,12 @@
         <p id="modal-black-mobile-quantity"><span id="modal-black-mobile-number">64</span> <span
             id="modal-black-mobile-left">left</span></p>
         <!-- Selected pledge start -->
-        <div id="modal-black-enter">
+        <div id="modal-black-enter" class="modal-enter">
           <p>Enter your pledge</p>
-          <form id="modal-pledge-enter-right">
-            <div id="modal-pledge-enter-amount">
+          <form id="modal-black-enter-right">
+            <div id="modal-black-enter-amount">
               <span>$</span>
-              <input type="text"></input>
+              <input type="text" id="modal-black-input" name="modal-black-input"></input>
             </div>
 
             <button>Continue</button>
@@ -267,11 +268,11 @@
       </article>
 
       
-      <article id="modal-mahogany">
+      <article id="modal-mahogany" class="modal-section">
         <div id="modal-mahogany-select">
           <div id="modal-mahogany-top">
-            <div id="modal-mahogany-radio">
-              <div id="modal-mahogany-radio-button"></div>
+            <div id="modal-mahogany-radio" class="radio">
+              <div id="modal-mahogany-radio-button" class="radio-button"></div>
             </div>
             <div id="modal-mahogany-h4-div">
               <h4>Mahogany Special Edition</h4>
@@ -287,12 +288,12 @@
         <p id="modal-mahogany-mobile-quantity"><span id="modal-mahogany-mobile-number">0</span> <span
             id="modal-mahogany-mobile-left">left</span></p>
         <!-- Selected pledge start -->
-        <div id="modal-mahogany-enter">
+        <div id="modal-mahogany-enter" class="modal-enter">
           <p>Enter your pledge</p>
-          <form id="modal-pledge-enter-right">
-            <div id="modal-pledge-enter-amount">
+          <form id="modal-mahogany-enter-right">
+            <div id="modal-mahogany-enter-amount">
               <span>$</span>
-              <input type="text"></input>
+              <input type="text" id="modal-mahogany-input" name="modal-mahogany-input"></input>
             </div>
 
             <button>Continue</button>
@@ -304,5 +305,5 @@
     </section>
   </div>
 </body>
-
+<script src="index.js"></script>
 </html>

@@ -58,13 +58,13 @@
     #bookmark {
         width: 175px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         margin-right: 3rem;
 
         span {
             color: hsl(0, 0%, 48%);
-            margin-right: 2rem;
+            margin-left: .75rem
         }
 
         &:hover {
@@ -108,7 +108,7 @@
     
     
         #back {
-            width: 215px;
+            width: 205px;
             margin-inline: 1.5rem .5rem;
         }
     

@@ -6,12 +6,12 @@
     top: 0;
     left: 0;
     z-index: 1;
-    display: flex;
+    display: none;
     justify-content: center;
 
     #modal {
         width: $width;
-        background-color: rgb(255, 255, 255);
+        background-color: hsl(0, 0%, 100%);
         border-radius: 8px;
         @include flexVert;
         align-self: center;
@@ -34,6 +34,7 @@
             color: hsl(0, 0%, 48%);
         }
     }
+
 }
 
 // ----------------------------Modal-Pledge-----------------------------------------------------
@@ -87,7 +88,7 @@
     }
 
     &-enter {
-        display: flex;
+        display: none;
         justify-content: space-between;
         position: relative;
 
@@ -150,7 +151,13 @@
             }
         }
     }
-}
+
+
+    }
+
+    
+
+    
 
 // ----------------------------Modal-Bamboo-----------------------------------------------------
 
@@ -192,6 +199,10 @@
             background-color: hsl(176, 50%, 47%);
             border-radius: 50%;
             display: none;
+
+            &.selected {
+                display: inline-block !important;
+            }
         }
     }
 
@@ -244,9 +255,13 @@
     }
 
     &-enter {
-        display: flex;
+        display: none;
         justify-content: space-between;
         position: relative;
+
+        &.selected {
+            display: flex !important;
+        }
 
         &::after {
             content: '';
@@ -351,6 +366,10 @@
             background-color: hsl(176, 50%, 47%);
             border-radius: 50%;
             display: none;
+
+            &.selected {
+                display: inline-block !important;
+            }
         }
     }
 
@@ -360,6 +379,10 @@
 
     h4 {
         margin-block: 2rem 1.25rem;
+
+        &:hover  {
+            color: black;
+        }
     }
 
     &-pledge {
@@ -402,9 +425,13 @@
     }
 
     &-enter {
-        display: flex;
+        display: none;
         justify-content: space-between;
         position: relative;
+
+        &.selected {
+            display: flex !important;
+        }
 
         &::after {
             content: '';
@@ -478,6 +505,8 @@
     border-radius: 8px;
     margin: 0 0 1.5rem 3rem;
     @include flexVert;
+    pointer-events: none;
+    
 
 
     &-select {
@@ -626,7 +655,7 @@
 
 @media (max-width: 375px) {
     #modal-overlay {
-        display: flex;
+        display: none;
 
         #modal {
             width: 310px;
@@ -822,69 +851,33 @@
         }
     
         &-enter {
-            display: flex;
+            display: none;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
     
-            &::after {
-                content: '';
-                width: 100%;
-                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-                position: absolute;
-                top: 0;
-            }
     
             & p {
-                font-size: 14px;
+                font-size: 13px;
                 color: hsl(0, 0%, 48%);
-                margin: 2.5rem 0 1.5rem 0;
+                margin: 2rem 0 1.25rem 0;
                 align-self: center;
             }
     
             &-right {
-                display: flex;
-                align-items: center;
                 justify-content: space-between;
+                padding-bottom: 1.5rem;
             }
     
             &-amount {
-                width: 5.5rem;
-                height: 2.75rem;
-                border: 2px solid hsla(0, 0%, 48%, 0.158);
-                border-radius: 25px;
-                display: flex;
-                align-items: center;
+
+                margin-left: 1.5rem;
     
-                span {
-                    font-size: 14px;
-                    color:hsla(0, 0%, 0%, 0.253);
-                    font-weight: 800;
-                    margin-inline: 1.25rem .5rem;
-                }
-    
-                input {
-                    width: 50%;
-                    font-weight: 800;
-                    border: none;
-                    outline: none;
-                }
             }
     
             & button {
-                width: 6rem;
-                height: 2.75rem;
-                font-family: "Commissioner", serif;
-                font-weight: 500;
-                background-color: hsl(176, 50%, 47%);
-                color: hsl(0, 0%, 100%);
-                border: none;
-                border-radius: 25px;
-                margin-inline: 1rem 1.5rem;
-    
-                &:hover {
-                    background-color: hsl(176, 72%, 28%);
-                }
+                width: 7rem;
+                margin-right: 1.5rem;
+
             }
         }
     
@@ -999,67 +992,31 @@
         &-enter {
             display: none;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
     
-            &::after {
-                content: '';
-                width: 100%;
-                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-                position: absolute;
-                top: 0;
-            }
     
             & p {
-                font-size: 14px;
+                font-size: 13px;
                 color: hsl(0, 0%, 48%);
-                margin: 2.5rem 0 1.5rem 0;
+                margin: 2rem 0 1.25rem 0;
                 align-self: center;
             }
     
             &-right {
-                display: flex;
-                align-items: center;
                 justify-content: space-between;
+                padding-bottom: 1.5rem;
             }
     
             &-amount {
-                width: 5.5rem;
-                height: 2.75rem;
-                border: 2px solid hsla(0, 0%, 48%, 0.158);
-                border-radius: 25px;
-                display: flex;
-                align-items: center;
+
+                margin-left: 1.5rem;
     
-                span {
-                    font-size: 14px;
-                    color:hsla(0, 0%, 0%, 0.253);
-                    font-weight: 800;
-                    margin-inline: 1.25rem .5rem;
-                }
-    
-                input {
-                    width: 50%;
-                    font-weight: 800;
-                    border: none;
-                    outline: none;
-                }
             }
     
             & button {
-                width: 6rem;
-                height: 2.75rem;
-                font-family: "Commissioner", serif;
-                font-weight: 500;
-                background-color: hsl(176, 50%, 47%);
-                color: hsl(0, 0%, 100%);
-                border: none;
-                border-radius: 25px;
-                margin-inline: 1rem 1.5rem;
-    
-                &:hover {
-                    background-color: hsl(176, 72%, 28%);
-                }
+                width: 7rem;
+                margin-right: 1.5rem;
+
             }
         }
     
@@ -1175,67 +1132,31 @@
         &-enter {
             display: none;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
     
-            &::after {
-                content: '';
-                width: 100%;
-                border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-                position: absolute;
-                top: 0;
-            }
     
             & p {
-                font-size: 14px;
-                color: hsla(0, 0%, 48%, 0.45);
-                margin: 2rem 0 1.5rem 0;
+                font-size: 13px;
+                color: hsl(0, 0%, 48%);
+                margin: 2rem 0 1.25rem 0;
                 align-self: center;
             }
     
             &-right {
-                display: flex;
-                align-items: center;
                 justify-content: space-between;
+                padding-bottom: 1.5rem;
             }
     
             &-amount {
-                width: 5.5rem;
-                height: 2.75rem;
-                border: 2px solid hsla(0, 0%, 48%, 0.158);
-                border-radius: 25px;
-                display: flex;
-                align-items: center;
+
+                margin-left: 1.5rem;
     
-                span {
-                    font-size: 14px;
-                    color:hsla(0, 0%, 0%, 0.253);
-                    font-weight: 800;
-                    margin-inline: 1.25rem .5rem;
-                }
-    
-                input {
-                    width: 50%;
-                    font-weight: 800;
-                    border: none;
-                    outline: none;
-                }
             }
     
             & button {
-                width: 6rem;
-                height: 2.75rem;
-                font-family: "Commissioner", serif;
-                font-weight: 500;
-                background-color: hsl(176, 50%, 47%);
-                color: hsl(0, 0%, 100%);
-                border: none;
-                border-radius: 25px;
-                margin-inline: 1rem 1.5rem;
-    
-                &:hover {
-                    background-color: hsl(176, 72%, 28%);
-                }
+                width: 7rem;
+                margin-right: 1.5rem;
+
             }
         }
     

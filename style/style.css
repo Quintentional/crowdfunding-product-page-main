@@ -67,6 +67,7 @@ nav a:not(:last-child) {
   }
   #hamburger-open {
     display: none;
+    z-index: 2;
   }
   #mobile-menu {
     position: absolute;
@@ -77,7 +78,7 @@ nav a:not(:last-child) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 2;
     left: 1.5rem;
     top: 5.5rem;
     display: none;
@@ -155,13 +156,13 @@ nav a:not(:last-child) {
 #project-bot #bookmark {
   width: 175px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-right: 3rem;
 }
 #project-bot #bookmark span {
   color: hsl(0, 0%, 48%);
-  margin-right: 2rem;
+  margin-left: 0.75rem;
 }
 #project-bot #bookmark:hover {
   cursor: pointer;
@@ -191,7 +192,7 @@ nav a:not(:last-child) {
     padding-block: 1.5rem 2.5rem;
   }
   #project-bot #back {
-    width: 215px;
+    width: 205px;
     margin-inline: 1.5rem 0.5rem;
   }
   #project-bot #bookmark {
@@ -666,6 +667,32 @@ nav a:not(:last-child) {
   background-color: hsl(176, 72%, 28%);
 }
 
+@media (max-width: 375px) {
+  #overlay {
+    justify-content: center;
+    display: none;
+  }
+  #complete {
+    width: 20.3rem;
+    height: 22.5rem;
+    top: 8.875rem;
+  }
+  #complete img {
+    width: 4rem;
+    height: 4rem;
+    margin-block: 2rem 1rem;
+  }
+  #complete h3 {
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+  }
+  #complete p {
+    width: 16rem;
+    font-size: 13px;
+    line-height: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+}
 #modal-overlay {
   width: 100%;
   height: 100%;
@@ -674,12 +701,12 @@ nav a:not(:last-child) {
   top: 0;
   left: 0;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 #modal-overlay #modal {
   width: 730px;
-  background-color: rgb(255, 255, 255);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -744,7 +771,7 @@ nav a:not(:last-child) {
   margin: 0 0 2rem 4.75rem;
 }
 #modal-pledge-enter {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: relative;
 }
@@ -836,6 +863,9 @@ nav a:not(:last-child) {
   border-radius: 50%;
   display: none;
 }
+#modal-bamboo-radio-button.selected {
+  display: inline-block !important;
+}
 #modal-bamboo-h4-div {
   display: flex;
 }
@@ -877,9 +907,12 @@ nav a:not(:last-child) {
   display: none;
 }
 #modal-bamboo-enter {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: relative;
+}
+#modal-bamboo-enter.selected {
+  display: flex !important;
 }
 #modal-bamboo-enter::after {
   content: "";
@@ -969,11 +1002,17 @@ nav a:not(:last-child) {
   border-radius: 50%;
   display: none;
 }
+#modal-black-radio-button.selected {
+  display: inline-block !important;
+}
 #modal-black-h4-div {
   display: flex;
 }
 #modal-black h4 {
   margin-block: 2rem 1.25rem;
+}
+#modal-black h4:hover {
+  color: black;
 }
 #modal-black-pledge {
   font-weight: 600;
@@ -1009,9 +1048,12 @@ nav a:not(:last-child) {
   display: none;
 }
 #modal-black-enter {
-  display: flex;
+  display: none;
   justify-content: space-between;
   position: relative;
+}
+#modal-black-enter.selected {
+  display: flex !important;
 }
 #modal-black-enter::after {
   content: "";
@@ -1073,6 +1115,7 @@ nav a:not(:last-child) {
   margin: 0 0 1.5rem 3rem;
   display: flex;
   flex-direction: column;
+  pointer-events: none;
 }
 #modal-mahogany-select {
   display: flex;
@@ -1197,7 +1240,7 @@ nav a:not(:last-child) {
 
 @media (max-width: 375px) {
   #modal-overlay {
-    display: flex;
+    display: none;
   }
   #modal-overlay #modal {
     width: 310px;
@@ -1353,62 +1396,26 @@ nav a:not(:last-child) {
     align-self: center;
   }
   #modal-bamboo-enter {
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
   }
-  #modal-bamboo-enter::after {
-    content: "";
-    width: 100%;
-    border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-    position: absolute;
-    top: 0;
-  }
   #modal-bamboo-enter p {
-    font-size: 14px;
+    font-size: 13px;
     color: hsl(0, 0%, 48%);
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 2rem 0 1.25rem 0;
     align-self: center;
   }
   #modal-bamboo-enter-right {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding-bottom: 1.5rem;
   }
   #modal-bamboo-enter-amount {
-    width: 5.5rem;
-    height: 2.75rem;
-    border: 2px solid hsla(0, 0%, 48%, 0.158);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-  }
-  #modal-bamboo-enter-amount span {
-    font-size: 14px;
-    color: hsla(0, 0%, 0%, 0.253);
-    font-weight: 800;
-    margin-inline: 1.25rem 0.5rem;
-  }
-  #modal-bamboo-enter-amount input {
-    width: 50%;
-    font-weight: 800;
-    border: none;
-    outline: none;
+    margin-left: 1.5rem;
   }
   #modal-bamboo-enter button {
-    width: 6rem;
-    height: 2.75rem;
-    font-family: "Commissioner", serif;
-    font-weight: 500;
-    background-color: hsl(176, 50%, 47%);
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 25px;
-    margin-inline: 1rem 1.5rem;
-  }
-  #modal-bamboo-enter button:hover {
-    background-color: hsl(176, 72%, 28%);
+    width: 7rem;
+    margin-right: 1.5rem;
   }
   #modal-black {
     width: 16.5rem;
@@ -1501,60 +1508,24 @@ nav a:not(:last-child) {
   #modal-black-enter {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
   }
-  #modal-black-enter::after {
-    content: "";
-    width: 100%;
-    border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-    position: absolute;
-    top: 0;
-  }
   #modal-black-enter p {
-    font-size: 14px;
+    font-size: 13px;
     color: hsl(0, 0%, 48%);
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 2rem 0 1.25rem 0;
     align-self: center;
   }
   #modal-black-enter-right {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding-bottom: 1.5rem;
   }
   #modal-black-enter-amount {
-    width: 5.5rem;
-    height: 2.75rem;
-    border: 2px solid hsla(0, 0%, 48%, 0.158);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-  }
-  #modal-black-enter-amount span {
-    font-size: 14px;
-    color: hsla(0, 0%, 0%, 0.253);
-    font-weight: 800;
-    margin-inline: 1.25rem 0.5rem;
-  }
-  #modal-black-enter-amount input {
-    width: 50%;
-    font-weight: 800;
-    border: none;
-    outline: none;
+    margin-left: 1.5rem;
   }
   #modal-black-enter button {
-    width: 6rem;
-    height: 2.75rem;
-    font-family: "Commissioner", serif;
-    font-weight: 500;
-    background-color: hsl(176, 50%, 47%);
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 25px;
-    margin-inline: 1rem 1.5rem;
-  }
-  #modal-black-enter button:hover {
-    background-color: hsl(176, 72%, 28%);
+    width: 7rem;
+    margin-right: 1.5rem;
   }
   #modal-mahogany {
     width: 16.5rem;
@@ -1647,60 +1618,24 @@ nav a:not(:last-child) {
   #modal-mahogany-enter {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
   }
-  #modal-mahogany-enter::after {
-    content: "";
-    width: 100%;
-    border-top: 1px solid hsla(0, 0%, 48%, 0.158);
-    position: absolute;
-    top: 0;
-  }
   #modal-mahogany-enter p {
-    font-size: 14px;
-    color: hsla(0, 0%, 48%, 0.45);
-    margin: 2rem 0 1.5rem 0;
+    font-size: 13px;
+    color: hsl(0, 0%, 48%);
+    margin: 2rem 0 1.25rem 0;
     align-self: center;
   }
   #modal-mahogany-enter-right {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding-bottom: 1.5rem;
   }
   #modal-mahogany-enter-amount {
-    width: 5.5rem;
-    height: 2.75rem;
-    border: 2px solid hsla(0, 0%, 48%, 0.158);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-  }
-  #modal-mahogany-enter-amount span {
-    font-size: 14px;
-    color: hsla(0, 0%, 0%, 0.253);
-    font-weight: 800;
-    margin-inline: 1.25rem 0.5rem;
-  }
-  #modal-mahogany-enter-amount input {
-    width: 50%;
-    font-weight: 800;
-    border: none;
-    outline: none;
+    margin-left: 1.5rem;
   }
   #modal-mahogany-enter button {
-    width: 6rem;
-    height: 2.75rem;
-    font-family: "Commissioner", serif;
-    font-weight: 500;
-    background-color: hsl(176, 50%, 47%);
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 25px;
-    margin-inline: 1rem 1.5rem;
-  }
-  #modal-mahogany-enter button:hover {
-    background-color: hsl(176, 72%, 28%);
+    width: 7rem;
+    margin-right: 1.5rem;
   }
 }
 * {
@@ -1736,7 +1671,7 @@ h3 {
   body {
     width: 375px;
     min-height: 100vh;
-    background-color: hsl(0, 0%, 96%);
+    background-color: black;
     font-family: "Commissioner", serif;
     display: flex;
     justify-content: center;
