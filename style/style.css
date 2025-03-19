@@ -714,7 +714,7 @@ nav a:not(:last-child) {
   top: 11.5rem;
   padding-bottom: 1.5rem;
 }
-#modal-overlay #modal img {
+#modal-overlay #modal-close {
   width: 1rem;
   height: 1rem;
   align-self: flex-end;
@@ -1248,8 +1248,9 @@ nav a:not(:last-child) {
     margin-top: 7.5rem;
     padding-bottom: 0.25rem;
   }
-  #modal-overlay #modal img {
+  #modal-overlay #modal-close {
     margin: 2rem 1.5rem 0 0;
+    z-index: 2;
   }
   #modal-overlay #modal h2 {
     font-size: 18px;
@@ -1671,7 +1672,6 @@ h3 {
   body {
     width: 375px;
     min-height: 100vh;
-    background-color: black;
     font-family: "Commissioner", serif;
     display: flex;
     justify-content: center;

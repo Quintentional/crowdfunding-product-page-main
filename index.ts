@@ -112,72 +112,110 @@ bookmark.addEventListener("click", () => {
 
 const selectRewardButton = document.querySelectorAll(".select-reward") as NodeListOf<HTMLElement>;
 
+// Button click to open the modal and activate matching section
 selectRewardButton.forEach((button) => {
   button.addEventListener("click", () => {
-    if (modalOverlay) {
-      modalOverlay.style.display = "flex";
-    }
+    if (modalOverlay) modalOverlay.style.display = "flex";
 
     const rewardId = button.dataset.rewardId;
 
-    modalSectionsWithId.forEach((section) => {
-      // Prevent Displaying Radio and Enter on non-matching section
+    // Clear all sections first
+    modalSectionsWithId.forEach((section) => toggleSectionState(section, false));
 
-      modalSectionsWithId.forEach((otherSection) => {
-        if (section.dataset.rewardId !== rewardId) {
-          const otherClosestRadio =
-            (otherSection.querySelector(".radio-button") as HTMLElement) ||
-            null;
-          const otherClosestEnter =
-            (otherSection.querySelector(".modal-enter") as HTMLElement) || null;
+    // Activate the section matching the button's reward ID
+    const matchingSection = Array.from(modalSectionsWithId).find(
+      (section) => section.dataset.rewardId === rewardId
+    );
 
-          if (otherClosestRadio) {
-            otherClosestRadio.classList.remove("selected");
-            console.log("reward id is not" + rewardId);
-          }
-
-          if (otherClosestEnter) otherClosestEnter.classList.remove("selected");
-        }
-      });
-
-      //Display Radio and Enter on matching section
-
-      if (section.dataset.rewardId === rewardId) {
-        console.log("reward id is" + rewardId);
-        console.log("Matching section found:", section);
-
-        const closestRadio =
-          (section.querySelector(".radio-button") as HTMLElement) || null;
-        const closestEnter =
-          (section.querySelector(".modal-enter") as HTMLElement) || null;
-
-        console.log("Radio Button:", closestRadio);
-        console.log("Modal Enter:", closestEnter);
-
-        if (closestRadio) {
-          closestRadio.classList.add("selected");
-          console.log("Radio button set to inline-block");
-        } else {
-          console.warn("Radio button not found inside:", section);
-        }
-
-        if (closestEnter) {
-          closestEnter.classList.add("selected");
-          console.log("Modal enter set to flex");
-        } else {
-          console.warn("Modal enter not found inside:", section);
-        }
-      }
-    });
+    if (matchingSection) toggleSectionState(matchingSection, true);
   });
 });
+
+// Allow clicking any modal section to switch the active state
+modalSections.forEach((section) => {
+  section.addEventListener("click", () => {
+    // Clear all sections' states first
+    modalSections.forEach((s) => toggleSectionState(s, false));
+
+    // Activate the clicked section
+    toggleSectionState(section, true);
+  });
+});
+
+// Helper function to handle showing/hiding sections' radio buttons & enter sections
+function toggleSectionState(section: Element, isActive: boolean) {
+  const radioButton = section.querySelector(".radio-button") as HTMLElement | null;
+  const enterSection = section.querySelector(".modal-enter") as HTMLElement | null;
+
+  if (radioButton) radioButton.classList.toggle("selected", isActive);
+  if (enterSection) enterSection.classList.toggle("selected", isActive);
+
+  console.log(`${isActive ? "Activated" : "Deactivated"} section:`, section);
+}
+
+
+// selectRewardButton.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     if (modalOverlay) modalOverlay.style.display = "flex";
+    
+
+//     const rewardId = button.dataset.rewardId;
+
+//     modalSectionsWithId.forEach((section) => {
+
+//       // Prevent Displaying Radio and Enter on non-matching section
+
+//       const radioButton = section.querySelector(".radio-button") as HTMLElement | null;
+//       const enterSection = section.querySelector(".modal-enter") as HTMLElement | null;
+
+//           if (radioButton) radioButton.classList.remove("selected");
+//           if (enterSection) enterSection.classList.remove("selected");
+
+//     });
+
+//           //Display Radio and Enter on matching section
+
+//           modalSectionsWithId.forEach((section) => {
+
+//             if (section.dataset.rewardId === rewardId) {
+//               console.log("Matching section found:", section);
+      
+//               const closestRadio = section.querySelector(".radio-button") as HTMLElement | null;
+//               const closestEnter = section.querySelector(".modal-enter") as HTMLElement | null;
+      
+//               if (closestRadio) {
+//                 closestRadio.classList.add("selected");
+//                 console.log("Radio button set to inline-block");
+//               } else {
+//                 console.warn("Radio button not found inside:", section);
+//               }
+      
+//               if (closestEnter) {
+//                 closestEnter.classList.add("selected");
+//                 console.log("Modal enter set to flex");
+//               } else {
+//                 console.warn("Modal enter not found inside:", section);
+//               }
+              
+//             }
+//           })
+
+//   });
+// });
 
 //----------------------------------------------------CLose Modal------------------------------------------------
 
 modalClose.addEventListener('click', () => {
+
+  console.log('x was clicked');
+  console.log("Button exists:", modalClose);
+console.log("Button offset:", modalClose.getBoundingClientRect());
+
+
   modalSections.forEach((section) => {
     const resetRadioButton = section.querySelector('.radio-button') as HTMLElement | null;
-    const resetEnterSection = section.querySelector('.enter-section') as HTMLElement | null;
+    const resetEnterSection = section.querySelector('.modal-enter') as HTMLElement | null;
+
 
       if(modalOverlay) {
         modalOverlay.style.display="none";
@@ -185,11 +223,19 @@ modalClose.addEventListener('click', () => {
     
 
     if(resetRadioButton) {
-      resetRadioButton.style.display='none';
+      resetRadioButton.classList.remove('selected');
+      resetRadioButton.style.display='none'
+      console.log('Radio button reset', resetRadioButton);
+    }else{
+      console.log('No resetRadioButton found');
     }
 
     if(resetEnterSection) {
-      resetEnterSection.style.display='none';
+      resetEnterSection.classList.remove('selected');
+      resetEnterSection.style.display='none'
+      console.log('Enter section reset', resetEnterSection);
+    }else{
+      console.log('No resetEnterSection found');
     }
   })
 })
